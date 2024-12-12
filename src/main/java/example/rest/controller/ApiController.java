@@ -14,7 +14,7 @@ public class ApiController {
     @Autowired
     UserService service;
 
-    @GetMapping("/")
+    @GetMapping("allUsers")
     public List<User> usersEndpoint() {
         return service.getAllUser();
     }

@@ -1,0 +1,104 @@
+:root {
+    --border: 1px solid #ddd;
+    --primary: dodgerblue;
+    --secondary: #f1f1f1;
+    --tertiary: #f9f9f9;
+    --spacing: 10px;
+    --spacing-sm: 5px;
+    --spacing-lg: 16px;
+    --radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: var(--spacing-lg);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    background-color: var(--secondary);
+    padding: var(--spacing) var(--spacing-lg);
+    border: var(--border);
+    width: 550px;
+    border-radius: var(--radius);
+}
+
+form .input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+form .input-container label {
+    width: 75px;
+}
+
+form .input-container input[type="text"] {
+    flex: 1;
+    border: var(--border);
+    padding: var(--spacing) var(--spacing-lg);
+    border-radius: var(--radius);
+}
+
+form .input-container input[type="number"] {
+    flex: 1;
+    border: var(--border);
+    padding: var(--spacing) var(--spacing-lg);
+    border-radius: var(--radius);
+    text-align: right;
+}
+
+form .input-container input[type="button"] {
+    padding: var(--spacing) var(--spacing-lg);
+    border: var(--border);
+    color: var(--primary);
+    border-radius: var(--radius);
+    background-color: var(--tertiary);
+    transition: 500ms;
+}
+
+form #ip-container-5 {
+    align-items: baseline;
+}
+
+form .input-container input[type="button"]:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+form .input-container select {
+    flex: 1;
+    border: var(--border);
+    height: 210px;
+    border-radius: var(--radius);
+}
+
+form .input-container select option {
+    padding: var(--spacing) var(--spacing-lg);
+}
+
+form .input-container input[type="submit"] {
+    flex: 1;
+    background-color: var(--primary);
+    border: none;
+    padding: var(--spacing) var(--spacing-lg);
+    color: white;
+    border-radius: var(--radius);
+}
