@@ -19,4 +19,8 @@ public class UserRepository {
     public List<User> getUsers() {
         return this.users;
     }
+
+    public void save(User new_user) {
+        users.add(new_user);
+    }
 }

@@ -16,4 +16,8 @@ public class UserService {
         return repository.getUsers();
     }
 
+    public void addUser(User new_user) {
+        repository.save(new_user);
+    }
+
 }

@@ -1,5 +1,6 @@
 package example.rest.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 public class User {
     private int uid;
-    private String firstName;
-    private String lastName;
+    @JsonProperty("first_name") private String firstName;
+    @JsonProperty("last_name") private String lastName;
     private String address;
     private List<String> skills;
 }
