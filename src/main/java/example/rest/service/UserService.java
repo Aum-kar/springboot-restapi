@@ -20,4 +20,7 @@ public class UserService {
         repository.save(new_user);
     }
 
+    public User getUser(int uid) {
+        return repository.getUser(uid);
+    }
 }

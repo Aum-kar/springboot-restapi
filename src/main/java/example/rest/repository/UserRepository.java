@@ -22,4 +22,11 @@ public class UserRepository {
     public void save(User new_user) {
         users.add(new_user);
     }
+
+    public User getUser(int uid) {
+        for(User user : users)
+            if(user.getUid() == uid)
+                return user;
+        return null;
+    }
 }
