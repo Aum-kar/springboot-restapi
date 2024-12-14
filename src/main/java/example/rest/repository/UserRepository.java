@@ -42,6 +42,6 @@ public class UserRepository {
     }
 
     public void delete(int uid) {
-        System.out.println("Unimplemented method");
+        users.removeIf(user -> user.getUid() == uid);
     }
 }
