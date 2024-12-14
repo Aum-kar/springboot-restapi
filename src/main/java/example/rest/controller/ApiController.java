@@ -32,4 +32,19 @@ public class ApiController {
 
         service.addUser(new User(uid, firstName, lastName, address, skills));
     }
+
+    /*
+    * first_name & last_name might show null value,
+    * as these fields in user model is represented
+    * as fistName and lastName respectively.
+    */
+    @PutMapping("user")
+    public void updateUser(User user) {
+        service.updateUser(user);
+    }
+
+    @DeleteMapping("user/{userId}")
+    public void deleteUser(@PathVariable("userId") int uid) {
+        service.deleteUser(uid);
+    }
 }

@@ -16,11 +16,19 @@ public class UserService {
         return repository.getUsers();
     }
 
+    public User getUser(int uid) {
+        return repository.getUser(uid);
+    }
+
     public void addUser(User new_user) {
         repository.save(new_user);
     }
 
-    public User getUser(int uid) {
-        return repository.getUser(uid);
+    public void updateUser(User user) {
+        repository.update(user);
+    }
+
+    public void deleteUser(int uid) {
+        repository.delete(uid);
     }
 }
