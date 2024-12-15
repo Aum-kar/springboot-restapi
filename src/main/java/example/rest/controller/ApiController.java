@@ -13,7 +13,7 @@ public class ApiController {
     @Autowired
     UserService service;
 
-    @GetMapping("all_users")
+    @GetMapping("users")
     public List<User> usersEndpoint() {
         return service.getAllUser();
     }
@@ -23,7 +23,7 @@ public class ApiController {
         return service.getUser(uid);
     }
 
-    @PostMapping("add_user")
+    @PostMapping("user")
     public void addUser(@RequestParam("uid") int uid,
                         @RequestParam("first_name") String firstName,
                         @RequestParam("last_name") String lastName,
